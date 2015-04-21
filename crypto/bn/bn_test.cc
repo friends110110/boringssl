@@ -1277,7 +1277,7 @@ static bool test_mod_sqrt(FILE *fp, BN_CTX *ctx) {
 }
 
 static bool test_small_prime(FILE *fp, BN_CTX *ctx) {
-  static const int kBits = 10;
+  static const unsigned int kBits = 10;
 
   ScopedBIGNUM r(BN_new());
   if (!r || !BN_generate_prime_ex(r.get(), kBits, 0, NULL, NULL, NULL)) {
